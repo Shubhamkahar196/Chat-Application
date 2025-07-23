@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-export const protectMiddleware = async(req,res,next)=>{
+ const protectMiddleware = async(req,res,next)=>{
     try{
         const token = req.cookies?.authToken;
 
@@ -26,3 +26,5 @@ export const protectMiddleware = async(req,res,next)=>{
 }
     
 };
+
+export default protectMiddleware

@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs'
 import {user, validateLogin} from '../models/userModel.js'
 
-export const loginController = async(req,res)=>{
+ const loginController = async(req,res)=>{
     try{
         const {error} = validateLogin(req.body);
 
@@ -54,3 +54,5 @@ export const loginController = async(req,res)=>{
        })
     }
 }
+
+export default loginController;

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose,{Schema} from "mongoose";
 const  AvatarSchema =  new Schema({
     link: {
         type: String,
@@ -10,5 +10,5 @@ const  AvatarSchema =  new Schema({
 })
 
 const Avatar = mongoose.model("Avatar", AvatarSchema);
+export default Avatar;
 
-module.exports = Avatar;

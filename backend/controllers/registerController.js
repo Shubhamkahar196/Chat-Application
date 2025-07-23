@@ -3,7 +3,7 @@ import { user, validateRegister } from '../models/userModel.js';
 import { Token } from '../models/tokenModel.js'
 import sendEmail from '../utils/sendEmail.js';
 
-export const registerController = async (req, res) => {
+ const registerController = async (req, res) => {
     try {
         const { error } = validateRegister(req.body);
 
@@ -54,3 +54,5 @@ export const registerController = async (req, res) => {
 
 
 }
+
+export default registerController
